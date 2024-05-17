@@ -9,7 +9,6 @@ body {
 #preloader {
     width: 100vh;
     height: 100vh;
-       transition: opacity 1s ease-out;
      
 }
 
