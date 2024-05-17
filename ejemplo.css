@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #faebd7;
+  font-family: sans-serif;
+}
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3d4144;
+  padding-bottom: 10px;
+  text-align: center;
+  
+}
+h2 {
+  text-shadow: 2px 2px 6px #4f4f5480;
+}
+main h2 {
+  padding: 20px;
+}
+p {
+  padding: 20px;
+  text-align: justify;
+}
+/* 
+todo aqui son clases
+*/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px hsla(0, 12%, 8%, 0.1);
+  border-radius: 5px;
+}
+
+.navbar {
+  background-color: #bdbdbd;
+  padding: 10px 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1320px;
+}
+
+.navbar h1 {
+  font-size: 20px;
+  border-bottom: 2px solid #3a3939;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+ 
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #000000;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  border: 1px solid transparent;
+ 
+}
+
+.nav-menu li a:hover {
+  background-color: #969696;
+  border-color: #6a6a6a;
+}
+
+.nav-menu li a .active {
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+
+
+.logo {
+  width: 80px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.6s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+.logo:hover{
+  box-shadow: 0 0 20px ;
+}
+
+
+.sidebar {
+  float: left;
+  width: 25%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #0000001a;
+  border-right: 2px solid #bdbdbd;
+  position: fixed;
+  height: 100%;
+   /* overflow para poder hacer scroll en la barra lateral,
+   ya que el texto  */
+  overflow: scroll; 
+/* 
+* overflow-x: hidden sirve para quitar el scroll lateral
+* en este caso no sirve y solo se ve innecesario
+*/
+  overflow-x: hidden; 
+   /* edición de la barra de scroll */
+   scrollbar-color: #343434 white;
+}
+.sidebar h2 {
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+
+.sidebar h1 {
+  border-bottom: 2px solid;
+  padding-bottom: 7px;
+  font-size: 30px;
+}
+.side-menu {
+  list-style: none;
+}
+.side-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  transition: background-color 0.3s, color 0.3s;
+  font-style: italic;
+  text-decoration: underline;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.side-menu li a:hover {
+  background-color: #aaa;
+  color: #fff;
+  border-color: #969696;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+    display: grid;
+  place-items: center;
+}
+
+/* La clase hola es para que el contenido se desplace a la derecha
+porque no encontré otra forma más practica
+*/
+.hola {
+  float: left;
+  width: 25%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-right: 2px solid #bdbdbd;
+  height: 100vh;
+}
+/* Galeria */
+
+.gallery {
+  display: grid;
+  /* ajustar el grid a la pantalla sin mediaquery */
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 17px;
+  max-width: 400px;
+  justify-items: center;
+  /* Pone los iconos en el medio */
+}
+
+.gallery-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 5px;
+  /* Transición que transforma la escala en 0.6 segundos y las sombras tambien */
+  transition: all 0.6s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.gallery-image:hover {
+  /* se escala y rota */
+  transform: scale(1.1)  rotate(5deg);
+  box-shadow: 5px 5px 10px black;
+  cursor: pointer;
+}
+
+/* tabla */
+.tittletable{
+  text-shadow: 4px 2px 8px black;
+}
+
+ .tabla-maquinas {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .tabla-maquinas th, .tabla-maquinas td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    
+  }
+  .tabla-maquinas th {
+    background-color: #bbb2b2;
+    color: rgb(0, 0, 0);
+  }
+
+/* 
+* se crea un outline alrededor de la tabla y se hace un padding que la recubra para 
+* que no este tan pegado
+*/
+
+
+.outlinetabla{
+  outline: 8px ridge rgba(13, 14, 13, 0.6);
+border-radius: 2rem;
+background-image: radial-gradient(circle, #7bd5da, #7dafc4, #71a1be, #6fa9af, #71a1be);
+
+}
+.contorno{
+  padding: 20px;
+}
+/* fin del recubrimiento y el padding */
+
+
+
+  td strong{
+/* 
+* se elimina los subtitulos que estan dentro de las secciones de la tabla en la pantalla
+* porque se ven innecesarios, luego se regresan en el celular
+*/
+
+ display: none;
+    }
+  
+
+
+  .tabla-maquinas img {
+height: 80px;
+text-align: center;
+  }
+
+
+/* 
+*media query
+*/
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+    border-right: none;
+    position: static;
+  }
+
+/* 
+Acomodamos el contenido en reversa para que el nav se muestre primero  y despues el aside 
+*/
+.reverse{  
+  display: flex;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+}
+
+  .hola{
+    width: 0;
+    height: 0;
+    /* con display: none quito el bloque para que no sea visible en el celular */
+   display: none;
+ 
+  }
+.navbar{
+  
+  width: 100%;
+}
+
+  .navbar .container {
+    /*
+     pones la barra de navegación en columnas y
+     pides que todo se posicione al inicio (a la derecha)
+     */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar-menu li {
+    margin: 0;
+  }
+
+  .navbar h1 {
+    margin-bottom: 10px;
+  }
+/* hacer la tabla para la vista en dispositivos moviles */
+table{
+  width: 100%;
+}
+
+table tr{
+
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  padding: 1em;
+  margin-bottom: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+table td{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+td strong{
+  display: block;
+     }
+
+
+.tabla-maquinas img{
+ width: 60px;
+
+}
+.tabla-maquinas td{
+  width: 250px;
+  
+}
+.tabla-maquinas th{
+  visibility: hidden;
+}
+tr:first-child{
+display: none;
+visibility: hidden;
+/* ocultamos las secciones de los nombres para que no sean visibles en celular */
+}
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* pones el contenedor como columnas */
+    margin: 0;
+  }
+
+  .main-content {
+    order: -1; 
+    margin-top: 20px; 
+  }
+
+  .sidebar {
+    margin-top: 20px; 
+
+  }
+}
