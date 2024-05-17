@@ -2,12 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const loader = document.getElementById("preloader");
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const loader = document.getElementById('preloader');
-    setTimeout(function() {
-        loader.style.opacity = '0';
-    }, 6000);
-});
+
 
 // animacion de la galeria
 window.requestAnimationFrame =
