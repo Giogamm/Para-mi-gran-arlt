@@ -68,6 +68,11 @@ canvas {
 a{
   text-decoration: underline;
   color: white;
+  transition: color 0.4s;
+}
+
+.regresar:hover{
+  color: red;
   
 }
 
