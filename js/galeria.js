@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const loader = document.getElementById('preloader');
-    // Cambia 3000 al número de milisegundos que desees
-    setTimeout(function() {
-        loader.style.opacity = '0';
-    }, 6000);
+    
 });
 
 
