@@ -23,18 +23,6 @@
    padding-left: 30px; /* Espacio en blanco a la izquierda */
    padding-right: 30px; /* Espacio en blanco a la derecha */
 }
-h1{
-  top: 600px;
- position: fixed;
-
-  color: #ff9494;
-  text-align: center;
-  text-decoration: underline;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  letter-spacing: 2px;
-  margin-bottom: 20px
-}
 
   h2{
     font-size: 2em;
